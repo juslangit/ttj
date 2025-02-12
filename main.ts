@@ -30,6 +30,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     scaling.scaleByPercent(diver, 50, ScaleDirection.Uniformly, ScaleAnchor.Middle)
     info.changeLifeBy(-1)
     music.play(music.melodyPlayable(music.buzzer), music.PlaybackMode.UntilDone)
+    sizeCount = 0
     timer.after(500, function () {
         sprite.setFlag(SpriteFlag.GhostThroughSprites, false)
     })
@@ -98,9 +99,9 @@ for (let index = 0; index < 10; index++) {
         `, SpriteKind.Food)
     cloud.setPosition(randint(scene.cameraProperty(CameraProperty.Left), 160), randint(0, 1400))
 }
-if (sizeCount == 1) {
-    count = 0
-}
 game.onUpdate(function () {
     controller.moveSprite(diver, 100, 0)
+    if (sizeCount == 1) {
+        count = 0
+    }
 })
