@@ -77,7 +77,7 @@ for (let index = 0; index < 100; index++) {
         . 1 1 1 1 . . 1 1 1 1 1 1 1 . 
         . . 1 1 1 . . . . 1 1 1 . . . 
         `, SpriteKind.Enemy)
-    cloud.setPosition(randint(scene.cameraProperty(CameraProperty.Left), 160), randint(0, 1400))
+    cloud.setPosition(randint(scene.cameraProperty(CameraProperty.Left), 160), randint(100, 1400))
 }
 for (let index = 0; index < 10; index++) {
     cloud = sprites.create(img`
